@@ -1,0 +1,117 @@
+:root {
+    --vary-light-grey: hsl(0, 0%, 95%);
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {font-size: 62.5%;}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+}
+
+main {
+    max-width: 92rem;
+    width: 90%;
+    height: 50rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+}
+
+.card {
+    position: relative;
+    flex: 1;
+}
+
+.card > * {
+    position: absolute;
+    left: 15.65%;
+}
+
+.card-sedans > button {color: var(--Bright-orange);}
+
+.card-suvs > button {color: var(--Dark-cyan);}
+
+.card-luxury > button {color: var(--Very-dark-cyan);}
+
+img {
+    width: 6.4rem;
+    height: 4rem;
+    top: 4.8rem;
+}
+
+h1 {
+    top: 12.3rem;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+    color: var(--vary-light-grey);
+}
+
+p {
+    max-width: 21rem;
+    width: 80%;
+    height: 12.5rem;
+    top: 19.6rem;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+button {
+    width: 14.6rem;
+    height: 4.8rem;
+    top: 40.4rem;
+    font: inherit;
+    background-color: var(--vary-light-grey);
+    border: none;
+    cursor: pointer;
+    border-radius: 5rem;
+    transition: background-color .3s;
+}
+
+button:hover {
+    color: var(--vary-light-grey);
+    border: 2px solid var(--vary-light-grey);
+}
+
+.card-sedans,
+.card-sedans > button:hover {background-color: var(--Bright-orange);}
+
+.card-suvs,
+.card-suvs > button:hover {background-color: var(--Dark-cyan);}
+
+.card-luxury,
+.card-luxury > button:hover {background-color: var(--Very-dark-cyan);}
+
+
+/*** MEDIA QUERY ***/
+@media (max-width: 45em) {
+    main {
+        width: 32.7rem;
+        height: 132.6rem;
+        margin: 5rem 0;
+        flex-direction: column;
+    }
+
+    button {top: 34.6rem;} 
+
+    p {max-width: 23rem;}
+}
