@@ -45,6 +45,12 @@ main {
     left: 15.65%;
 }
 
+.card-sedans {background-color: var(--Bright-orange);}
+
+.card-suvs {background-color: var(--Dark-cyan);}
+
+.card-luxury {background-color: var(--Very-dark-cyan);}
+
 .card-sedans > button {color: var(--Bright-orange);}
 
 .card-suvs > button {color: var(--Dark-cyan);}
@@ -81,25 +87,16 @@ button {
     top: 40.4rem;
     font: inherit;
     background-color: var(--vary-light-grey);
-    border: none;
-    cursor: pointer;
+    border: 2px solid var(--vary-light-grey);
     border-radius: 5rem;
-    transition: background-color .3s;
+    cursor: pointer;
+    transition: color .3s, background-color .3s;
 }
 
 button:hover {
     color: var(--vary-light-grey);
-    border: 2px solid var(--vary-light-grey);
+    background-color: transparent;  
 }
-
-.card-sedans,
-.card-sedans > button:hover {background-color: var(--Bright-orange);}
-
-.card-suvs,
-.card-suvs > button:hover {background-color: var(--Dark-cyan);}
-
-.card-luxury,
-.card-luxury > button:hover {background-color: var(--Very-dark-cyan);}
 
 
 /*** MEDIA QUERY ***/
